@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: asistente-educativo-rag
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python -m api.main
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: EMBEDDING_MODEL
+        value: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+      - key: VECTOR_STORE
+        value: chroma
+      - key: PERSIST_DIRECTORY
+        value: /tmp/vector_store
+    healthCheckPath: /health
+    autoDeploy: true
+    disk:
+      name: data
+      mountPath: /tmp/vector_store
+      sizeGB: 1

@@ -1,0 +1,36 @@
+#Para arrancar el ambiente virtual
+chat_env\Scripts\activate 
+
+#Para verificar si la api esta corriendo
+netstat -ano | findstr :8000
+
+# Ejecutar la api
+python -m api.main
+
+# Aca esta la aplicacion
+http://localhost:8000/
+
+# interfaz interactiva
+http://localhost:8000/docs
+
+# Prueba Intents
+
+{
+  "message": "hola, tengo una duda sobre el módulo",
+  "user_id": "usuario_prueba"
+}
+
+# Prueba RAG
+
+{
+  "message": "No guarde mi número de folio proporcionado al finalizar su pre-registro",
+  "user_id": "string",
+  "conversation_id": "string"
+}
+
+# Limpiar cache del pip
+pip cache purge
+
+
+#Para cargar datos al sistema RAG
+python scripts/upload_documents.py --file data/documents/tickets.xlsx

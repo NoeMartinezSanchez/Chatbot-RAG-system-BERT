@@ -1,0 +1,96 @@
+📦 ChatBot_4/
+├── 📁 api/
+│   ├── 📄 endpoints.py
+│   └── 📄 main.py
+├── 📁 chat_env/
+│   ├── 📁 Include/
+│   ├── 📁 Lib/
+│   │   └── 📁 site-packages/
+│   ├── 📁 Library/
+│   │   ├── 📁 bin/
+│   │   ├── 📁 lib/
+│   │   └── 📁 share/
+│   ├── 📁 Scripts/
+│   │   ├── 📄 Activate.ps1
+│   │   ├── 📄 activate
+│   │   ├── 📄 activate.bat
+│   │   ├── 📄 ccmake.exe
+│   │   ├── 📄 cmake.exe
+│   │   ├── 📄 cpack.exe
+│   │   ├── 📄 ctest.exe
+│   │   ├── 📄 deactivate.bat
+│   │   ├── 📄 dotenv.exe
+│   │   ├── 📄 f2py.exe
+│   │   ├── 📄 hf.exe
+│   │   ├── 📄 httpx.exe
+│   │   ├── 📄 huggingface-cli.exe
+│   │   ├── 📄 isympy.exe
+│   │   ├── 📄 ninja.exe
+│   │   ├── 📄 nltk.exe
+│   │   ├── 📄 normalizer.exe
+│   │   ├── 📄 pip.exe
+│   │   ├── 📄 pip3.12.exe
+│   │   ├── 📄 pip3.exe
+│   │   ├── 📄 py.test.exe
+│   │   ├── 📄 pygmentize.exe
+│   │   ├── 📄 pytest.exe
+│   │   ├── 📄 python.exe
+│   │   ├── 📄 pythonw.exe
+│   │   ├── 📄 tiny-agents.exe
+│   │   ├── 📄 torchfrtrace.exe
+│   │   ├── 📄 torchrun.exe
+│   │   ├── 📄 tqdm.exe
+│   │   ├── 📄 transformers-cli.exe
+│   │   ├── 📄 transformers.exe
+│   │   ├── 📄 uvicorn.exe
+│   │   ├── 📄 watchfiles.exe
+│   │   ├── 📄 websockets.exe
+│   │   └── 📄 wheel.exe
+│   └── 📁 share/
+│       └── 📁 man/
+├── 📁 config/
+│   ├── 📄 models.py
+│   └── 📄 settings.py
+├── 📁 data/
+│   ├── 📁 documents/
+│   │   ├── 📄 create_prepa_excel.py
+│   │   ├── 📄 tickets.xlsx
+│   │   └── 📄 tickets_config.json
+│   ├── 📁 vector_store/
+│   │   ├── 📄 documents.pkl
+│   │   ├── 📄 faiss_index.bin
+│   │   ├── 📄 intents.json
+│   │   └── 📄 metadata.pkl
+│   ├── 📄 intents.json
+│   └── 📄 rag_import_report.json
+├── 📁 docker/
+│   └── 📄 Dockerfile
+├── 📁 logs/
+├── 📁 rag/
+│   ├── 📄 core.py
+│   ├── 📄 core.py.backup
+│   ├── 📄 core.py.backup2
+│   ├── 📄 core.py.backup_20260108_160440
+│   ├── 📄 embeddings.py
+│   ├── 📄 generator.py
+│   ├── 📄 retriever.py
+│   ├── 📄 retriever.py.backup
+│   └── 📄 retriever.py.backup2
+├── 📁 scripts/
+│   ├── 📄 setup_local.py
+│   └── 📄 upload_documents.py
+├── 📁 tests/
+│   ├── 📄 test_api.py
+│   └── 📄 test_rag.py
+├── 📄 .env
+├── 📄 README.md
+├── 📄 debug_intents_fixed_corrected.py
+├── 📄 fix_core_process_query.py
+├── 📄 fix_intents_search.py
+├── 📄 generate_tree.py
+├── 📄 notas.txt
+├── 📄 presentacion.html
+├── 📄 render.yaml
+├── 📄 requirements.txt
+├── 📄 test_core_fix.py
+└── 📄 test_intents_fixed.py

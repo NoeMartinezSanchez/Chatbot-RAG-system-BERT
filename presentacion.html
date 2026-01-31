@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot RAG - Prepa en Línea-SEP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .slide { display: none; min-height: 100vh; }
+        .slide.active { display: flex; flex-direction: column; }
+        .gradient-text {
+            background: linear-gradient(90deg, #4f46e5, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 overflow-hidden">
+
+    <!-- Navegación -->
+    <div class="fixed bottom-6 right-6 flex space-x-2 z-50">
+        <button onclick="prevSlide()" class="p-3 bg-white border rounded-full shadow-sm hover:bg-gray-100 transition">←</button>
+        <button onclick="nextSlide()" class="p-3 bg-indigo-600 text-white rounded-full shadow-md hover:bg-indigo-700 transition">→</button>
+    </div>
+
+    <!-- Indicador de Progreso -->
+    <div class="fixed top-0 left-0 h-1 bg-indigo-600 transition-all duration-300" id="progress-bar" style="width: 20%;"></div>
+
+    <!-- Slide 1: Portada -->
+    <section class="slide active justify-center items-center p-10">
+        <div class="text-center max-w-4xl">
+            <span class="px-4 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm font-semibold uppercase tracking-wider">Estado del Proyecto</span>
+            <h1 class="text-6xl font-bold mt-6 mb-4">Chatbot RAG</h1>
+            <p class="text-2xl text-slate-500 font-light">Prepa en Línea-SEP: Inteligencia Artificial para el éxito educativo.</p>
+            <div class="mt-12 h-1 w-24 bg-indigo-600 mx-auto"></div>
+        </div>
+    </section>
+
+    <!-- Slide 2: Visión Técnica vs Administrativa -->
+    <section class="slide justify-center p-10">
+        <h2 class="text-3xl font-bold mb-10 text-center">Resumen</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+                <div class="flex items-center mb-4">
+                    <div class="p-2 bg-blue-100 rounded-lg mr-3">🛠️</div>
+                    <h3 class="text-xl font-bold text-blue-800">Técnicamente</h3>
+                </div>
+                <ul class="space-y-3 text-slate-600">
+                    <li class="flex items-start"><span class="text-blue-500 mr-2">✓</span> Backend FastAPI + Python 3.11</li>
+                    <li class="flex items-start"><span class="text-blue-500 mr-2">✓</span> RAG con FAISS & Multilingual-MiniLM</li>
+                    <li class="flex items-start"><span class="text-blue-500 mr-2">✓</span> Respuestas < 1.5s en CPU</li>
+                    <li class="flex items-start"><span class="text-blue-500 mr-2">✓</span> 95% precisión en intenciones core</li>
+                </ul>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+                <div class="flex items-center mb-4">
+                    <div class="p-2 bg-emerald-100 rounded-lg mr-3">📊</div>
+                    <h3 class="text-xl font-bold text-emerald-800">Administrativo</h3>
+                </div>
+                <ul class="space-y-3 text-slate-600">
+                    <li class="flex items-start"><span class="text-emerald-500 mr-2">✓</span> Meta: -40% carga de tickets humanos</li>
+                    <li class="flex items-start"><span class="text-emerald-500 mr-2">✓</span> Costo infra: ~$200/mes (Open Source)</li>
+                    <li class="flex items-start"><span class="text-emerald-500 mr-2">✓</span> ROI proyectado en reducción de tiempos</li>
+                    <li class="flex items-start"><span class="text-emerald-500 mr-2">✓</span> Escalabilidad masiva garantizada</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Slide 3: El Corazón del Sistema (Diagrama) -->
+    <section class="slide p-10">
+        <h2 class="text-3xl font-bold mb-8 text-center">Pipeline de inteligencia (RAG)</h2>
+        <div class="max-w-5xl mx-auto bg-white p-8 rounded-3xl shadow-lg border border-indigo-50 relative overflow-hidden">
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0 md:space-x-4 relative z-10">
+                <!-- Step 1 -->
+                <div class="text-center w-40">
+                    <div class="w-16 h-16 bg-indigo-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg font-bold">1</div>
+                    <p class="font-semibold text-sm">Usuario</p>
+                    <p class="text-xs text-slate-400 italic">"¿Cuándo es el examen?"</p>
+                </div>
+                <div class="hidden md:block text-indigo-300">→</div>
+                <!-- Step 2 -->
+                <div class="text-center w-40">
+                    <div class="w-16 h-16 bg-indigo-500 text-white rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg font-bold">2</div>
+                    <p class="font-semibold text-sm">Embedding</p>
+                    <p class="text-xs text-slate-400">Conversión a vector semántico</p>
+                </div>
+                <div class="hidden md:block text-indigo-300">→<
+                    /div>
+                <!-- Step 3 -->
+                <div class="text-center w-40">
+                    <div class="w-16 h-16 bg-pink-500 text-white rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg font-bold">3</div>
+                    <p class="font-semibold text-sm">Recuperación</p>
+                    <p class="text-xs text-slate-400 italic">Búsqueda en FAISS (Base Conocimiento)</p>
+                </div>
+                <div class="hidden md:block text-indigo-300">→</div>
+                <!-- Step 4 -->
+                <div class="text-center w-40">
+                    <div class="w-16 h-16 bg-slate-800 text-white rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg font-bold">4</div>
+                    <p class="font-semibold text-sm">Generación</p>
+                    <p class="text-xs text-slate-400 italic">RoBERTa crea respuesta natural (420 Mb)</p>
+                </div>
+            </div>
+            <!-- Background Decorative -->
+            <div class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-indigo-50 rounded-full blur-3xl opacity-50"></div>
+        </div>
+        <div class="mt-10 grid grid-cols-3 gap-4 max-w-4xl mx-auto text-center">
+            <div class="p-4 bg-slate-100 rounded-xl">
+                <p class="text-2xl font-bold">1.2s</p>
+                <p class="text-xs text-slate-500 uppercase tracking-widest font-semibold">Latencia media</p>
+            </div>
+            <div class="p-4 bg-slate-100 rounded-xl">
+                <p class="text-2xl font-bold">85%</p>
+                <p class="text-xs text-slate-500 uppercase tracking-widest font-semibold">Precisión semántica</p>
+            </div>
+            <div class="p-4 bg-slate-100 rounded-xl">
+                <p class="text-2xl font-bold">100%</p>
+                <p class="text-xs text-slate-500 uppercase tracking-widest font-semibold">Uptime actual</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 4: Foco en Modelos (RoBERTa) -->
+    <section class="slide p-10 justify-center">
+        <h2 class="text-3xl font-bold mb-8 text-center">Motor de Lenguaje: RoBERTa-BNE</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <div class="bg-indigo-50 p-6 rounded-2xl border border-indigo-100">
+                <h3 class="font-bold text-indigo-800 mb-2">Español Nativo</h3>
+                <p class="text-sm text-slate-600">Entrenado por el BSC con datos de la BNE. No es traducción; entiende regionalismos y contexto educativo mexicano.</p>
+            </div>
+            <div class="bg-indigo-50 p-6 rounded-2xl border border-indigo-100">
+                <h3 class="font-bold text-indigo-800 mb-2">Extracción NER+</h3>
+                <p class="text-sm text-slate-600">Identifica automáticamente entidades clave: CURP, folios de trámites y fechas de convocatorias sin programación extra.</p>
+            </div>
+            <div class="bg-indigo-50 p-6 rounded-2xl border border-indigo-100">
+                <h3 class="font-bold text-indigo-800 mb-2">Eficiencia Base</h3>
+                <p class="text-sm text-slate-600">Modelo equilibrado (125M params). Ofrece precisión de vanguardia corriendo en infraestructura estándar (CPU).</p>
+            </div>
+        </div>
+        <div class="mt-8 p-6 bg-slate-800 text-slate-300 rounded-xl max-w-2xl mx-auto text-center">
+            <p class="text-xs font-mono">Modelo: hackathon-somos-nlp-2023 / roberta-base-bne-capitel-ner-plus</p>
+        </div>
+    </section>
+
+    <!-- Slide 4: Hoja de Ruta -->
+    <section class="slide p-10 justify-center">
+        <h2 class="text-3xl font-bold mb-10 text-center">Plan</h2>
+        <div class="max-w-4xl mx-auto space-y-6">
+            <div class="flex items-center p-5 bg-white rounded-xl shadow-sm border-l-4 border-indigo-600">
+                <div class="w-24 font-bold text-indigo-600">Sem 1</div>
+                <div class="flex-1 ml-6 text-slate-700">
+                    <p class="font-bold">Estabilización</p>
+                    <p class="text-sm">Carga de tickets + Fine-tuning de búsqueda.</p>
+                </div>
+                <div class="text-indigo-200">En curso</div>
+            </div>
+            <div class="flex items-center p-5 bg-white rounded-xl shadow-sm border-l-4 border-slate-300">
+                <div class="w-24 font-bold text-slate-400">Sem 2</div>
+                <div class="flex-1 ml-6 text-slate-700">
+                    <p class="font-bold">Escalabilidad</p>
+                    <p class="text-sm">Dockerización, CI/CD y monitoreo.</p>
+                </div>
+            </div>
+            <div class="flex items-center p-5 bg-white rounded-xl shadow-sm border-l-4 border-slate-300">
+                <div class="w-24 font-bold text-slate-400">Sem 4-5</div>
+                <div class="flex-1 ml-6 text-slate-700">
+                    <p class="font-bold">Producción (Go-Live)</p>
+                    <p class="text-sm">Rollout progresivo al 100% y soporte post-implementación.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 5: Conclusión y Demo -->
+    <section class="slide justify-center items-center p-10 bg-indigo-900 text-white text-center">
+        <h2 class="text-4xl font-bold mb-4">¿Estamos listos?</h2>
+        <p class="text-indigo-200 text-xl max-w-2xl mb-12">El sistema base es robusto, ligero y multilingüe. El siguiente paso es la carga masiva de conocimiento.</p>
+        
+        <div class="p-8 border-2 border-dashed border-indigo-400 rounded-3xl animate-pulse">
+            <h3 class="text-2xl font-bold mb-2">DEMO EN VIVO</h3>
+            <p class="text-indigo-300">Haz clic para ver el bot en acción</p>
+        </div>
+
+        <div class="mt-20 text-indigo-400 text-sm">
+            <p>Siguiente paso: carga de conocimiento extensa</p>
+        </div>
+    </section>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const progressBar = document.getElementById('progress-bar');
+
+        function updateSlide() {
+            slides.forEach((slide, index) => {
+                slide.classList.toggle('active', index === currentSlide);
+            });
+            progressBar.style.width = ((currentSlide + 1) / slides.length * 100) + '%';
+        }
+
+        function nextSlide() {
+            if (currentSlide < slides.length - 1) {
+                currentSlide++;
+                updateSlide();
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateSlide();
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') nextSlide();
+            if (e.key === 'ArrowLeft') prevSlide();
+        });
+    </script>
+</body>
+</html>

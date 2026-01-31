@@ -1,0 +1,12 @@
+{
+  "total_documents": 53,
+  "by_category": {
+    "Soporte Técnico": 6,
+    "Académico": 8,
+    "Administrativo": 3,
+    "Información General": 4,
+    "Documentación": 7,
+    "Recursos Humanos": 1
+  },
+  "loaded_at": "2026-01-08T18:35:41.336262"
+}
