@@ -65,17 +65,15 @@
 │   └── 📄 rag_import_report.json
 ├── 📁 docker/
 │   └── 📄 Dockerfile
+├── 📁 images/
+│   ├── 📄 api.jpg
+│   └── 📄 prueba_rag.jpg
 ├── 📁 logs/
 ├── 📁 rag/
 │   ├── 📄 core.py
-│   ├── 📄 core.py.backup
-│   ├── 📄 core.py.backup2
-│   ├── 📄 core.py.backup_20260108_160440
 │   ├── 📄 embeddings.py
 │   ├── 📄 generator.py
-│   ├── 📄 retriever.py
-│   ├── 📄 retriever.py.backup
-│   └── 📄 retriever.py.backup2
+│   └── 📄 retriever.py
 ├── 📁 scripts/
 │   ├── 📄 setup_local.py
 │   └── 📄 upload_documents.py
@@ -85,12 +83,11 @@
 ├── 📄 .env
 ├── 📄 README.md
 ├── 📄 debug_intents_fixed_corrected.py
+├── 📄 estructura_proyecto.txt
 ├── 📄 fix_core_process_query.py
 ├── 📄 fix_intents_search.py
 ├── 📄 generate_tree.py
 ├── 📄 notas.txt
 ├── 📄 presentacion.html
 ├── 📄 render.yaml
-├── 📄 requirements.txt
-├── 📄 test_core_fix.py
-└── 📄 test_intents_fixed.py
+└── 📄 requirements.txt
