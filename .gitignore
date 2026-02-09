@@ -3,7 +3,13 @@ chat_env/
 env/
 venv/
 .venv/
-*.env
+# CORRECCIÓN: Solo el archivo .env, no todos los *.env
+.env
+# .env.local también es común excluir
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
 # ======= ARCHIVOS DE PYTHON =======
 __pycache__/
@@ -31,3 +37,39 @@ share/python-wheels/
 
 # ======= PAQUETES INSTALADOS =======
 site-packages/
+
+# ======= EDITORES Y IDEs =======
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ======= DATOS TEMPORALES =======
+# Archivos de Excel de prueba o temporales
+data/documents/*.xlsx
+# PERO: Mantén los archivos de configuración
+!data/documents/tickets_config.json
+
+# ======= LOGS =======
+logs/
+*.log
+
+# ======= FAISS INDEX (GRANDES) =======
+# Los índices FAISS son grandes y específicos del entorno
+data/vector_store/faiss_index.bin
+data/vector_store/*.pkl
+# Pero mantén intents.json que es configuración
+!data/vector_store/intents.json
+
+# ======= SISTEMA =======
+.DS_Store
+Thumbs.db
+
+# ======= PYTEST =======
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ======= DOCKER =======
+docker-compose.override.yml

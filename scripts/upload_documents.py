@@ -310,7 +310,7 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Ejemplos de uso:
-  %(prog)s --file data/tickets.xlsx
+  %(prog)s --file data/tickets_3.xlsx
   %(prog)s --file documentos/soporte.xlsx --verbose
   %(prog)s --help
 

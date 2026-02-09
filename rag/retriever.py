@@ -11,6 +11,8 @@ from typing import List, Dict, Any, Optional, Tuple
 import logging
 from datetime import datetime
 
+from config.settings import settings  # <-- SE AÑADIO ESTA LINEA
+
 logger = logging.getLogger(__name__)
 
 class VectorStoreFAISS:
@@ -19,13 +21,17 @@ class VectorStoreFAISS:
     Compatible con AWS Lambda + S3 para futura migración.
     """
     
-    def __init__(self, persist_directory: str = "./data/vector_store"):
+    def __init__(self, persist_directory: str = None):
         """
         Inicializar almacén vectorial FAISS.
         
         Args:
             persist_directory: Directorio para persistir índices
         """
+        if persist_directory is None:
+            persist_directory = settings.FAISS_PERSIST_DIR
+        
+        
         self.persist_directory = persist_directory
         os.makedirs(persist_directory, exist_ok=True)
         

@@ -2,6 +2,7 @@ import numpy as np
 from typing import List
 from sentence_transformers import SentenceTransformer
 import logging
+from config.settings import settings  # <-- SE AÑADIO ESTA LINEA
 
 logger = logging.getLogger(__name__)
 

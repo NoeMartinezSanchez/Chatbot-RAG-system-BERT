@@ -20,6 +20,9 @@ class RAGSystem:
         self.vector_store = VectorStoreFAISS()  # <-- CORREGIDO
         self.generator = ResponseGenerator()
         self.intents_loaded = False
+
+        self.top_k = settings.TOP_K_RESULTS
+        self.similarity_threshold = settings.SIMILARITY_THRESHOLD
         
         logger.info("RAG System initialized con FAISS")
     

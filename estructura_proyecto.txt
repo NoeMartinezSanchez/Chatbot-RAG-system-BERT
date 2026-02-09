@@ -55,7 +55,10 @@
 │   ├── 📁 documents/
 │   │   ├── 📄 create_prepa_excel.py
 │   │   ├── 📄 tickets.xlsx
-│   │   └── 📄 tickets_config.json
+│   │   ├── 📄 tickets_2.xlsx
+│   │   ├── 📄 tickets_3.xlsx
+│   │   ├── 📄 tickets_config.json
+│   │   └── 📄 ~$tickets_3.xlsx
 │   ├── 📁 vector_store/
 │   │   ├── 📄 documents.pkl
 │   │   ├── 📄 faiss_index.bin
@@ -67,7 +70,12 @@
 │   └── 📄 Dockerfile
 ├── 📁 images/
 │   ├── 📄 api.jpg
-│   └── 📄 prueba_rag.jpg
+│   ├── 📄 deepseek_mermaid_20260202_c8b939.png
+│   ├── 📄 deepseek_mermaid_20260204_cbb6d3.png
+│   ├── 📄 deepseek_mermaid_20260204_f42f98.png
+│   ├── 📄 mermaid-diagram-2026-01-31-000713.png
+│   ├── 📄 prueba_rag.jpg
+│   └── 📄 rag_diagram.png
 ├── 📁 logs/
 ├── 📁 rag/
 │   ├── 📄 core.py
@@ -77,6 +85,8 @@
 ├── 📁 scripts/
 │   ├── 📄 setup_local.py
 │   └── 📄 upload_documents.py
+├── 📁 static/
+│   └── 📄 index.html
 ├── 📁 tests/
 │   ├── 📄 test_api.py
 │   └── 📄 test_rag.py
