@@ -63,3 +63,17 @@ Ahora deberías tener:
 🩺 Health Check: http://localhost:8000/health
 
 📊 Estadísticas: http://localhost:8000/stats
+
+## COMO SE USA EL DEBUGER
+
+# Prueba simple
+python debug_rag_avanzado.py --query "¿Cómo cambio mi correo electrónico?"
+
+# Suite completa
+python debug_rag_avanzado.py --suite
+
+# Con nombre personalizado
+python debug_rag_avanzado.py --suite --name "antes_mejoras"
+
+# Comparar después de mejoras
+python debug_rag_avanzado.py --suite --name "despues_mejoras" --compare "antes_mejoras"

@@ -6,6 +6,7 @@ from typing import Tuple, Dict, Any, List
 import json
 import os
 import random
+import re
 
 from config.settings import settings
 from .embeddings import EmbeddingModel
@@ -51,47 +52,103 @@ class RAGSystem:
                     json.dump(basic_intents, f, ensure_ascii=False, indent=2)
                 logger.info("Created basic intents file")
     
-    def process_query(self, query: str) -> Tuple[str, bool, float, list]:
+    def _clean_query(self, query: str) -> str:
         """
-        Procesa una consulta y retorna respuesta y metadata
+        Limpiar consulta para mejor matching con intents.
+        """
+        # Quitar signos de puntuación y convertir a minúsculas
+        clean = re.sub(r'[^\w\sáéíóúüñÁÉÍÓÚÜÑ¿?]', '', query.lower())
+        return clean.strip()
+    
+    def _classify_query_type(self, query: str) -> str:
+        """
+        Clasificar el tipo de consulta para decidir prioridad.
+        """
+        query_lower = query.lower()
         
-        Returns:
-            Tuple[str, bool, float, list]: (respuesta, es_rag, confianza, fuentes)
+        # Palabras clave para intents (saludos, despedidas, etc.)
+        intent_keywords = {
+            'saludo': ['hola', 'buen día', 'buenas', 'saludos', 'qué tal', 'cómo estás'],
+            'despedida': ['adiós', 'hasta luego', 'chao', 'bye', 'nos vemos'],
+            'gracias': ['gracias', 'agradecido', 'agradezco'],
+            'ayuda_general': ['ayuda', 'ayúdame', 'asistencia', 'soporte']
+        }
+        
+        # Verificar si es un intent básico
+        for intent_type, keywords in intent_keywords.items():
+            if any(keyword in query_lower for keyword in keywords):
+                return intent_type
+        
+        # Preguntas técnicas/complejas van a RAG
+        question_words = ['cómo', 'dónde', 'cuándo', 'qué', 'por qué', 'cuál', 'cuánto']
+        if any(query_lower.startswith(word) for word in question_words):
+            return 'rag_preferido'
+        
+        return 'neutral'
+    
+    def _should_use_intent(self, query: str, intent_results: Dict, intent_priority: str) -> bool:
+        """
+        Decidir si usar intent basado en múltiples criterios.
+        """
+        # 1. Si es saludo/despedida, SIEMPRE usar intent
+        if intent_priority in ['saludo', 'despedida', 'gracias']:
+            return True
+        
+        # 2. Si no hay resultados de intent, usar RAG
+        if not intent_results.get('metadatas') or not intent_results['metadatas'][0]:
+            return False
+        
+        # 3. Verificar calidad del match
+        best_intent = intent_results['metadatas'][0][0] if intent_results['metadatas'][0] else None
+        best_distance = intent_results['distances'][0][0] if intent_results['distances'][0] else 1.0
+        
+        # 4. Reglas de decisión
+        if intent_priority == 'rag_preferido':
+            # Preguntas técnicas: solo usar intent si es MUY bueno
+            return best_distance < 0.3  # Match muy cercano
+        
+        # Caso general: balancear longitud y calidad
+        if len(query) < 100:  # No demasiado larga
+            # Distancia baja = buen match
+            if best_distance < 0.5:  # Ajusta según necesidad
+                return True
+        
+        return False
+    
+    def _format_intent_response(self, intent_results: Dict) -> Tuple[str, bool, float, list]:
+        """
+        Formatear respuesta de intent para compatibilidad.
+        """
+        if not intent_results.get('metadatas') or not intent_results['metadatas'][0]:
+            return ("", False, 0.0, [])
+        
+        best_intent = intent_results['metadatas'][0][0]
+        best_distance = intent_results['distances'][0][0]
+        
+        # Convertir distancia a confianza
+        confidence = max(0.0, 1.0 - best_distance)
+        
+        # Seleccionar respuesta aleatoria del intent
+        responses = best_intent.get('responses', ['Lo siento, no tengo una respuesta preparada.'])
+        response = random.choice(responses)
+        
+        return (response, False, confidence, [])
+    
+    def _rag_process(self, query: str) -> Tuple[str, bool, float, list]:
+        """
+        Procesar consulta usando RAG (para preguntas técnicas/complejas).
         """
         try:
             # 1. Generar embedding de la consulta
             query_embedding = self.embedder.embed_text(query)
             
-            # 2. Primero verificar si es un intent conocido
-            if self.intents_loaded:
-                intent_results = self.vector_store.search_intents(
-                    query_text=query,
-                    query_embedding=query_embedding, 
-                    top_k=1
-                )
-                
-                # Verificar si hay match de intent
-                try:
-                    if (intent_results and 
-                        intent_results.get('metadatas') and 
-                        len(intent_results['metadatas']) > 0 and
-                        len(intent_results['metadatas'][0]) > 0):
-                        
-                        # Es un intent conocido
-                        metadata = intent_results['metadatas'][0][0]
-                        response = self.generator.generate_from_intent(metadata)
-                        return response, False, 0.9, []
-                except Exception as e:
-                    logger.warning(f"Error verificando intents: {e}")
-                    # Continuar con RAG si hay error
-            
-            # 3. Buscar documentos relevantes
+            # 2. Buscar documentos relevantes
             doc_results = self.vector_store.search_documents(
                 query_embedding, 
                 top_k=settings.TOP_K_RESULTS
             )
             
-            # Verificar si hay documentos relevantes
+            # 3. Verificar si hay documentos relevantes
             if (not doc_results['documents'] or 
                 not doc_results['documents'][0] or
                 len(doc_results['documents'][0]) == 0):
@@ -120,7 +177,7 @@ class RAGSystem:
                     }
                     sources.append(source_info)
             
-            # Calcular confianza basada en distancia (convertir a similitud)
+            # 6. Calcular confianza basada en distancia (convertir a similitud)
             confidence = 0.0
             if doc_results['distances'] and doc_results['distances'][0]:
                 # Convertir distancia L2 a similitud aproximada
@@ -130,8 +187,44 @@ class RAGSystem:
             return response, True, confidence, sources
             
         except Exception as e:
-            logger.error(f"Error processing query: {e}")
+            logger.error(f"Error en RAG process: {e}")
             return "Lo siento, tuve un problema procesando tu pregunta. ¿Podrías intentarlo de nuevo?", False, 0.0, []
+    
+    def process_query(self, query: str) -> Tuple[str, bool, float, list]:
+        """
+        Procesa una consulta y retorna respuesta y metadata
+        
+        Returns:
+            Tuple[str, bool, float, list]: (respuesta, es_rag, confianza, fuentes)
+        """
+        query = query.strip()
+        
+        # SIEMPRE verifica intents primero para mantener funcionalidad de saludos/despedidas
+        if self.intents_loaded:
+            # Mejorar la detección de intents
+            
+            # 1. Limpiar y analizar la consulta
+            clean_query = self._clean_query(query)
+            
+            # 2. Clasificar por tipo de pregunta
+            intent_priority = self._classify_query_type(query)
+            
+            # 3. Verificar intents con criterios mejorados
+            intent_results = self.vector_store.search_intents(
+                query_text=clean_query,  # Usar consulta limpia
+                top_k=3
+            )
+            
+            # 4. Evaluar resultados de intents
+            use_intent = self._should_use_intent(query, intent_results, intent_priority)
+            
+            if use_intent:
+                logger.info(f"Usando intent para: '{query[:50]}...' (tipo: {intent_priority})")
+                return self._format_intent_response(intent_results)
+        
+        # Si no usamos intent, usar RAG
+        logger.info(f"Usando RAG para: '{query[:50]}...'")
+        return self._rag_process(query)
     
     def add_document(self, content: str, metadata: Dict[str, Any] = None):
         """Añade un documento al sistema"""

@@ -22,10 +22,27 @@ class EmbeddingModel:
             
         logger.info(f"Embedding model loaded: {self.model_name}")
     
+    # Cambia TU embeddings.py (línea 23):
     def embed_text(self, text: str) -> np.ndarray:
-        """Genera embeddings para un texto"""
-        return self.model.encode(text, show_progress_bar=False)
+        embedding = self.model.encode(text, show_progress_bar=False)
+    
+        # SE AÑADE ESTO (NORMALIZACIÓN): ⭐⭐
+        # Calcular norma
+        norm = np.linalg.norm(embedding)
+    
+        # Normalizar solo si la norma no es cero
+        if norm > 0:
+            embedding = embedding / norm
+
+        return embedding
     
     def embed_batch(self, texts: List[str]) -> np.ndarray:
-        """Genera embeddings en batch"""
-        return self.model.encode(texts, show_progress_bar=False, batch_size=32)
+        embeddings = self.model.encode(texts, show_progress_bar=False, batch_size=32)
+    
+        # ⭐⭐ NORMALIZAR TODOS LOS EMBEDDINGS: ⭐⭐
+        norms = np.linalg.norm(embeddings, axis=1, keepdims=True)
+        # Evitar división por cero
+        norms[norms == 0] = 1
+        embeddings = embeddings / norms
+    
+        return embeddings

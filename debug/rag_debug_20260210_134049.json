@@ -1,0 +1,402 @@
+[
+  {
+    "timestamp": "2026-02-10T13:40:51.126595",
+    "test_name": "cambio_correo",
+    "query": "¿Cómo cambio mi correo electrónico?",
+    "embedding_time_ms": 736.62,
+    "process_time_ms": 660.46,
+    "total_time_ms": 1402.12,
+    "response_preview": "El procedimiento descrito en los materiales es:\n\nCluster_ID: 14\nTema de Ayuda: Problemas con el registro / Recomendaciones\nAsunto: No cuento con un domicilio reconocido.\nDescripción: El domicilio dond...",
+    "is_rag_response": true,
+    "confidence_percent": 16.25,
+    "sources_count": 2,
+    "embedding_norm": "1.0",
+    "embedding_mean": "-0.0003",
+    "embedding_std": "0.051",
+    "embedding_shape": [
+      384
+    ],
+    "total_documents": 156,
+    "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "intents_loaded": false,
+    "sources_details": [
+      {
+        "content_preview": "Cluster_ID: 14\nTema de Ayuda: Problemas con el registro / Recomendaciones\nAsunto: No cuento con un d",
+        "metadata": "{\"title\": \"Sheet1_14\", \"type\": \"general_document\", \"source\": \"excel_import\", \"sheet_name\": \"Sheet1\", \"row_index\": 14, \"doc_id\": \"a68a26de89aa\", \"added_at\": \"2026-02-04T22:32:17.217846\", \"doc_index\": 1"
+      },
+      {
+        "content_preview": "Cluster_ID: 84\nTema de Ayuda: Problemas con el registro / Recomendaciones\nAsunto: como actualizar mi",
+        "metadata": "{\"title\": \"Sheet1_84\", \"type\": \"general_document\", \"source\": \"excel_import\", \"sheet_name\": \"Sheet1\", \"row_index\": 84, \"doc_id\": \"6e6ae5f31202\", \"added_at\": \"2026-02-04T22:32:29.951203\", \"doc_index\": 8"
+      }
+    ],
+    "search_details": {
+      "distances": [
+        5.1545,
+        5.4258,
+        5.4494,
+        5.4718,
+        5.5572
+      ],
+      "similarities": [
+        16.25,
+        15.56,
+        15.51,
+        15.45,
+        15.25
+      ],
+      "documents_found": 5,
+      "best_similarity": 16.25
+    },
+    "full_response": "El procedimiento descrito en los materiales es:\n\nCluster_ID: 14\nTema de Ayuda: Problemas con el registro / Recomendaciones\nAsunto: No cuento con un domicilio reconocido.\nDescripción: El domicilio donde vivo no tiene domicilio reconocido y quiero saber si es válida una constancia domiciliaria expedida por el municipio. El motivo de mi ticket es por que o no cuento con un comprobante de domicilio oficial con la dirección misma de mi INE pues mi casa cuenta con dos entradas que salen directo a las calles y el comprobante oficial esta con una direccion diferente.\n\n¿Esta información responde a tu pregunta?"
+  },
+  {
+    "timestamp": "2026-02-10T13:40:52.405064",
+    "test_name": "saludo_simple",
+    "query": "Hola, ¿cómo estás?",
+    "embedding_time_ms": 61.66,
+    "process_time_ms": 701.03,
+    "total_time_ms": 763.69,
+    "response_preview": "Que otro comprobante podría usar.\n\n💡 *Información basada en materiales del módulo*",
+    "is_rag_response": true,
+    "confidence_percent": 15.94,
+    "sources_count": 2,
+    "embedding_norm": "1.0",
+    "embedding_mean": "-0.0",
+    "embedding_std": "0.051",
+    "embedding_shape": [
+      384
+    ],
+    "total_documents": 156,
+    "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "intents_loaded": false,
+    "sources_details": [
+      {
+        "content_preview": "Cluster_ID: 50\nTema de Ayuda: Problemas con el registro / Recomendaciones\nAsunto: COMO PODERME REINC",
+        "metadata": "{\"title\": \"Sheet1_50\", \"type\": \"general_document\", \"source\": \"excel_import\", \"sheet_name\": \"Sheet1\", \"row_index\": 50, \"doc_id\": \"7f5708fbf284\", \"added_at\": \"2026-02-04T22:32:23.284805\", \"doc_index\": 5"
+      },
+      {
+        "content_preview": "Cluster_ID: 14\nTema de Ayuda: Problemas con el registro / Recomendaciones\nAsunto: No cuento con un d",
+        "metadata": "{\"title\": \"Sheet1_14\", \"type\": \"general_document\", \"source\": \"excel_import\", \"sheet_name\": \"Sheet1\", \"row_index\": 14, \"doc_id\": \"a68a26de89aa\", \"added_at\": \"2026-02-04T22:32:17.217846\", \"doc_index\": 1"
+      }
+    ],
+    "search_details": {
+      "distances": [
+        5.2742,
+        5.4481,
+        5.5443,
+        5.6315,
+        5.7102
+      ],
+      "similarities": [
+        15.94,
+        15.51,
+        15.28,
+        15.08,
+        14.9
+      ],
+      "documents_found": 5,
+      "best_similarity": 15.94
+    },
+    "full_response": "Que otro comprobante podría usar.\n\n💡 *Información basada en materiales del módulo*"
+  },
+  {
+    "timestamp": "2026-02-10T13:40:53.838456",
+    "test_name": "reingreso",
+    "query": "Quiero retomar mis estudios en prepa en línea",
+    "embedding_time_ms": 123.49,
+    "process_time_ms": 804.04,
+    "total_time_ms": 927.54,
+    "response_preview": "Encontramos esta información relevante en los materiales:\n\nCluster_ID: 50\nTema de Ayuda: Problemas con el registro / Recomendaciones\nAsunto: COMO PODERME REINCORPORAR A PREPA EN LINEA\nDescripción: HAC...",
+    "is_rag_response": true,
+    "confidence_percent": 17.15,
+    "sources_count": 2,
+    "embedding_norm": "1.0",
+    "embedding_mean": "-0.0002",
+    "embedding_std": "0.051",
+    "embedding_shape": [
+      384
+    ],
+    "total_documents": 156,
+    "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "intents_loaded": false,
+    "sources_details": [
+      {
+        "content_preview": "Cluster_ID: 50\nTema de Ayuda: Problemas con el registro / Recomendaciones\nAsunto: COMO PODERME REINC",
+        "metadata": "{\"title\": \"Sheet1_50\", \"type\": \"general_document\", \"source\": \"excel_import\", \"sheet_name\": \"Sheet1\", \"row_index\": 50, \"doc_id\": \"7f5708fbf284\", \"added_at\": \"2026-02-04T22:32:23.284805\", \"doc_index\": 5"
+      },
+      {
+        "content_preview": "Cluster_ID: 149\nTema de Ayuda: Problemas con el registro / Recomendaciones\nAsunto: Registro para asp",
+        "metadata": "{\"title\": \"Sheet1_149\", \"type\": \"general_document\", \"source\": \"excel_import\", \"sheet_name\": \"Sheet1\", \"row_index\": 149, \"doc_id\": \"ebd99905f775\", \"added_at\": \"2026-02-04T22:32:43.178095\", \"doc_index\":"
+      }
+    ],
+    "search_details": {
+      "distances": [
+        4.8309,
+        4.8314,
+        4.9201,
+        4.9903,
+        5.016
+      ],
+      "similarities": [
+        17.15,
+        17.15,
+        16.89,
+        16.69,
+        16.62
+      ],
+      "documents_found": 5,
+      "best_similarity": 17.15
+    },
+    "full_response": "Encontramos esta información relevante en los materiales:\n\nCluster_ID: 50\nTema de Ayuda: Problemas con el registro / Recomendaciones\nAsunto: COMO PODERME REINCORPORAR A PREPA EN LINEA\nDescripción: HACE TIEMPO ESTUVE INSCRITA EN PREPA EN LINEA SEP Y POR CUESTIONE DE SALUD NO INICIE CON LA ESCUELA. AHORA QUISIERA HACERMI REINCORPORACION PARA EL BACHILLERATO Llevo dos semanas intentando hacer el examen propedeutico pero no me deja ingresar a mi comunidad, he puesto mi usuario, mi correo, y solo se regresa en blanco, quiero poder hacer mi examen, espero respuesta,no les pude convertir el video a pdf, pero si unas fotos como evidencia // Buen día, me gustarìa regístrame al ciclo escolar de este año, hace como dos años me registre pero por cuestiones ajenas a mi no pude continuar, sin embargo como ya fui registrado anterior mente no me deja postularme nuevamente ¿podrían ayudarme?.\n\n¿Hay algún aspecto específico que te gustaría que amplíe?"
+  },
+  {
+    "timestamp": "2026-02-10T13:40:54.738875",
+    "test_name": "problemas_registro",
+    "query": "Problemas con el registro en la plataforma",
+    "embedding_time_ms": 57.03,
+    "process_time_ms": 335.26,
+    "total_time_ms": 393.29,
+    "response_preview": "Encontramos esta información relevante en los materiales:\n\nCluster_ID: 29\nTema de Ayuda: Problemas con el registro / Recomendaciones\nAsunto: Correo institucional \nDescripción:  RESUMEN DE CONSULTAS: \n...",
+    "is_rag_response": true,
+    "confidence_percent": 17.88,
+    "sources_count": 2,
+    "embedding_norm": "1.0",
+    "embedding_mean": "0.0004",
+    "embedding_std": "0.051",
+    "embedding_shape": [
+      384
+    ],
+    "total_documents": 156,
+    "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "intents_loaded": false,
+    "sources_details": [
+      {
+        "content_preview": "Cluster_ID: 29\nTema de Ayuda: Problemas con el registro / Recomendaciones\nAsunto: Correo institucion",
+        "metadata": "{\"title\": \"Sheet1_29\", \"type\": \"general_document\", \"source\": \"excel_import\", \"sheet_name\": \"Sheet1\", \"row_index\": 29, \"doc_id\": \"5aad4467ac22\", \"added_at\": \"2026-02-04T22:32:19.750039\", \"doc_index\": 2"
+      },
+      {
+        "content_preview": "Cluster_ID: 14\nTema de Ayuda: Problemas con el registro / Recomendaciones\nAsunto: No cuento con un d",
+        "metadata": "{\"title\": \"Sheet1_14\", \"type\": \"general_document\", \"source\": \"excel_import\", \"sheet_name\": \"Sheet1\", \"row_index\": 14, \"doc_id\": \"a68a26de89aa\", \"added_at\": \"2026-02-04T22:32:17.217846\", \"doc_index\": 1"
+      }
+    ],
+    "search_details": {
+      "distances": [
+        4.5917,
+        4.7953,
+        4.8728,
+        4.8994,
+        5.0352
+      ],
+      "similarities": [
+        17.88,
+        17.26,
+        17.03,
+        16.95,
+        16.57
+      ],
+      "documents_found": 5,
+      "best_similarity": 17.88
+    },
+    "full_response": "Encontramos esta información relevante en los materiales:\n\nCluster_ID: 29\nTema de Ayuda: Problemas con el registro / Recomendaciones\nAsunto: Correo institucional \nDescripción:  RESUMEN DE CONSULTAS: \nRespuesta Institucional: Completó todas las fases del registro y cuenta con su folio correspondiente, deberá ingresar al sistema para consultar su usuario (ID) y contraseña, que requerirá para acceder al módulo propedéutico. Considere que debe tener a la mano su curp, correo registrado y el folio de registro que se le proporcionó.\n\n¿Necesitas más detalles sobre este tema?"
+  },
+  {
+    "timestamp": "2026-02-10T13:40:55.739092",
+    "test_name": "inscripcion",
+    "query": "¿Cuál es el proceso de inscripción?",
+    "embedding_time_ms": 103.89,
+    "process_time_ms": 391.59,
+    "total_time_ms": 496.14,
+    "response_preview": "Encontramos esta información relevante en los materiales:\n\nCluster_ID: 29\nTema de Ayuda: Problemas con el registro / Recomendaciones\nAsunto: Correo institucional \nDescripción:  RESUMEN DE CONSULTAS: \n...",
+    "is_rag_response": true,
+    "confidence_percent": 19.03,
+    "sources_count": 2,
+    "embedding_norm": "1.0",
+    "embedding_mean": "0.0002",
+    "embedding_std": "0.051",
+    "embedding_shape": [
+      384
+    ],
+    "total_documents": 156,
+    "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "intents_loaded": false,
+    "sources_details": [
+      {
+        "content_preview": "Cluster_ID: 29\nTema de Ayuda: Problemas con el registro / Recomendaciones\nAsunto: Correo institucion",
+        "metadata": "{\"title\": \"Sheet1_29\", \"type\": \"general_document\", \"source\": \"excel_import\", \"sheet_name\": \"Sheet1\", \"row_index\": 29, \"doc_id\": \"5aad4467ac22\", \"added_at\": \"2026-02-04T22:32:19.750039\", \"doc_index\": 2"
+      },
+      {
+        "content_preview": "Cluster_ID: 82\nTema de Ayuda: Problemas con el registro / Recomendaciones\nAsunto: Clave de Secundria",
+        "metadata": "{\"title\": \"Sheet1_82\", \"type\": \"general_document\", \"source\": \"excel_import\", \"sheet_name\": \"Sheet1\", \"row_index\": 82, \"doc_id\": \"7c22c2b65548\", \"added_at\": \"2026-02-04T22:32:29.544320\", \"doc_index\": 8"
+      }
+    ],
+    "search_details": {
+      "distances": [
+        4.2555,
+        4.5734,
+        4.8263,
+        4.9804,
+        5.016
+      ],
+      "similarities": [
+        19.03,
+        17.94,
+        17.16,
+        16.72,
+        16.62
+      ],
+      "documents_found": 5,
+      "best_similarity": 19.03
+    },
+    "full_response": "Encontramos esta información relevante en los materiales:\n\nCluster_ID: 29\nTema de Ayuda: Problemas con el registro / Recomendaciones\nAsunto: Correo institucional \nDescripción:  RESUMEN DE CONSULTAS: \nRespuesta Institucional: Completó todas las fases del registro y cuenta con su folio correspondiente, deberá ingresar al sistema para consultar su usuario (ID) y contraseña, que requerirá para acceder al módulo propedéutico. Considere que debe tener a la mano su curp, correo registrado y el folio de registro que se le proporcionó.\n\n¿Esta información responde a tu pregunta?"
+  },
+  {
+    "timestamp": "2026-02-10T13:40:56.609561",
+    "test_name": "acceso_modulo",
+    "query": "No puedo acceder al módulo propedéutico",
+    "embedding_time_ms": 74.01,
+    "process_time_ms": 290.63,
+    "total_time_ms": 364.64,
+    "response_preview": "Encontramos esta información relevante en los materiales:\n\nCluster_ID: 14\nTema de Ayuda: Problemas con el registro / Recomendaciones\nAsunto: No cuento con un domicilio reconocido.\nDescripción: El domi...",
+    "is_rag_response": true,
+    "confidence_percent": 16.54,
+    "sources_count": 2,
+    "embedding_norm": "1.0",
+    "embedding_mean": "0.0002",
+    "embedding_std": "0.051",
+    "embedding_shape": [
+      384
+    ],
+    "total_documents": 156,
+    "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "intents_loaded": false,
+    "sources_details": [
+      {
+        "content_preview": "Cluster_ID: 14\nTema de Ayuda: Problemas con el registro / Recomendaciones\nAsunto: No cuento con un d",
+        "metadata": "{\"title\": \"Sheet1_14\", \"type\": \"general_document\", \"source\": \"excel_import\", \"sheet_name\": \"Sheet1\", \"row_index\": 14, \"doc_id\": \"a68a26de89aa\", \"added_at\": \"2026-02-04T22:32:17.217846\", \"doc_index\": 1"
+      },
+      {
+        "content_preview": "Cluster_ID: 29\nTema de Ayuda: Problemas con el registro / Recomendaciones\nAsunto: Correo institucion",
+        "metadata": "{\"title\": \"Sheet1_29\", \"type\": \"general_document\", \"source\": \"excel_import\", \"sheet_name\": \"Sheet1\", \"row_index\": 29, \"doc_id\": \"5aad4467ac22\", \"added_at\": \"2026-02-04T22:32:19.750039\", \"doc_index\": 2"
+      }
+    ],
+    "search_details": {
+      "distances": [
+        5.0464,
+        5.0819,
+        5.2963,
+        5.3368,
+        5.4019
+      ],
+      "similarities": [
+        16.54,
+        16.44,
+        15.88,
+        15.78,
+        15.62
+      ],
+      "documents_found": 5,
+      "best_similarity": 16.54
+    },
+    "full_response": "Encontramos esta información relevante en los materiales:\n\nCluster_ID: 14\nTema de Ayuda: Problemas con el registro / Recomendaciones\nAsunto: No cuento con un domicilio reconocido.\nDescripción: El domicilio donde vivo no tiene domicilio reconocido y quiero saber si es válida una constancia domiciliaria expedida por el municipio. El motivo de mi ticket es por que o no cuento con un comprobante de domicilio oficial con la dirección misma de mi INE pues mi casa cuenta con dos entradas que salen directo a las calles y el comprobante oficial esta con una direccion diferente.\n\n¿Necesitas más detalles sobre este tema?"
+  },
+  {
+    "timestamp": "2026-02-10T13:40:57.611147",
+    "test_name": "equivalencia",
+    "query": "Información sobre equivalencia de estudios",
+    "embedding_time_ms": 57.61,
+    "process_time_ms": 438.15,
+    "total_time_ms": 495.77,
+    "response_preview": "Encontramos esta información relevante en los materiales:\n\nCluster_ID: 82\nTema de Ayuda: Problemas con el registro / Recomendaciones\nAsunto: Clave de Secundria\nDescripción: Estudie en el INEPJA de  ag...",
+    "is_rag_response": true,
+    "confidence_percent": 18.85,
+    "sources_count": 2,
+    "embedding_norm": "1.0",
+    "embedding_mean": "0.0002",
+    "embedding_std": "0.051",
+    "embedding_shape": [
+      384
+    ],
+    "total_documents": 156,
+    "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "intents_loaded": false,
+    "sources_details": [
+      {
+        "content_preview": "Cluster_ID: 82\nTema de Ayuda: Problemas con el registro / Recomendaciones\nAsunto: Clave de Secundria",
+        "metadata": "{\"title\": \"Sheet1_82\", \"type\": \"general_document\", \"source\": \"excel_import\", \"sheet_name\": \"Sheet1\", \"row_index\": 82, \"doc_id\": \"7c22c2b65548\", \"added_at\": \"2026-02-04T22:32:29.544320\", \"doc_index\": 8"
+      },
+      {
+        "content_preview": "Cluster_ID: 49\nTema de Ayuda: Problemas con el registro / Recomendaciones\nAsunto: como sacar duplica",
+        "metadata": "{\"title\": \"Sheet1_49\", \"type\": \"general_document\", \"source\": \"excel_import\", \"sheet_name\": \"Sheet1\", \"row_index\": 49, \"doc_id\": \"9b86db7b15fd\", \"added_at\": \"2026-02-04T22:32:23.091022\", \"doc_index\": 4"
+      }
+    ],
+    "search_details": {
+      "distances": [
+        4.3053,
+        4.6783,
+        4.7144,
+        4.8649,
+        4.931
+      ],
+      "similarities": [
+        18.85,
+        17.61,
+        17.5,
+        17.05,
+        16.86
+      ],
+      "documents_found": 5,
+      "best_similarity": 18.85
+    },
+    "full_response": "Encontramos esta información relevante en los materiales:\n\nCluster_ID: 82\nTema de Ayuda: Problemas con el registro / Recomendaciones\nAsunto: Clave de Secundria\nDescripción: Estudie en el INEPJA de  aguascalientes, pero no se cuál es la clave de trabajo de la Secundaria.\nRespuesta Institucional: Mares , le informamos que, la Clave de Centro de Trabajo o CCT debe venir en su certificado de secundaria, ese dato es indispensable en dichos documentos, pero si por alguna razón no lo contiene o tiene problema para ubicarlo, le recomendamos contactar directamente con la escuela o plantel donde realizó sus estudios para que le proporcionen dicho dato.\n\n¿Hay algún aspecto específico que te gustaría que amplíe?"
+  },
+  {
+    "timestamp": "2026-02-10T13:40:58.508914",
+    "test_name": "sla_soporte",
+    "query": "SLA para soporte técnico",
+    "embedding_time_ms": 93.56,
+    "process_time_ms": 297.57,
+    "total_time_ms": 392.14,
+    "response_preview": "Encontramos esta información relevante en los materiales:\n\nCluster_ID: 29\nTema de Ayuda: Problemas con el registro / Recomendaciones\nAsunto: Correo institucional \nDescripción:  RESUMEN DE CONSULTAS: \n...",
+    "is_rag_response": true,
+    "confidence_percent": 18.9,
+    "sources_count": 2,
+    "embedding_norm": "1.0",
+    "embedding_mean": "0.0003",
+    "embedding_std": "0.051",
+    "embedding_shape": [
+      384
+    ],
+    "total_documents": 156,
+    "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "intents_loaded": false,
+    "sources_details": [
+      {
+        "content_preview": "Cluster_ID: 29\nTema de Ayuda: Problemas con el registro / Recomendaciones\nAsunto: Correo institucion",
+        "metadata": "{\"title\": \"Sheet1_29\", \"type\": \"general_document\", \"source\": \"excel_import\", \"sheet_name\": \"Sheet1\", \"row_index\": 29, \"doc_id\": \"5aad4467ac22\", \"added_at\": \"2026-02-04T22:32:19.750039\", \"doc_index\": 2"
+      },
+      {
+        "content_preview": "Cluster_ID: 82\nTema de Ayuda: Problemas con el registro / Recomendaciones\nAsunto: Clave de Secundria",
+        "metadata": "{\"title\": \"Sheet1_82\", \"type\": \"general_document\", \"source\": \"excel_import\", \"sheet_name\": \"Sheet1\", \"row_index\": 82, \"doc_id\": \"7c22c2b65548\", \"added_at\": \"2026-02-04T22:32:29.544320\", \"doc_index\": 8"
+      }
+    ],
+    "search_details": {
+      "distances": [
+        4.2917,
+        4.4047,
+        4.6373,
+        4.6723,
+        4.7754
+      ],
+      "similarities": [
+        18.9,
+        18.5,
+        17.74,
+        17.63,
+        17.31
+      ],
+      "documents_found": 5,
+      "best_similarity": 18.9
+    },
+    "full_response": "Encontramos esta información relevante en los materiales:\n\nCluster_ID: 29\nTema de Ayuda: Problemas con el registro / Recomendaciones\nAsunto: Correo institucional \nDescripción:  RESUMEN DE CONSULTAS: \nRespuesta Institucional: Completó todas las fases del registro y cuenta con su folio correspondiente, deberá ingresar al sistema para consultar su usuario (ID) y contraseña, que requerirá para acceder al módulo propedéutico. Considere que debe tener a la mano su curp, correo registrado y el folio de registro que se le proporcionó.\n\n¿Necesitas más detalles sobre este tema?"
+  }
+]
