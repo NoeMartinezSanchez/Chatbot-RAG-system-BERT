@@ -1,0 +1,23 @@
+{
+  "total_chunks": 144,
+  "by_type": {
+    "convocatoria": 10,
+    "decalogo": 6,
+    "guia": 23,
+    "normativa": 23,
+    "politica": 47,
+    "protocolo": 32,
+    "reglas": 3
+  },
+  "by_source": {
+    "bases convocatoria_g85.pdf": 10,
+    "Construyendo comunidades.pdf": 6,
+    "guia_aspirante_g85.pdf": 23,
+    "Normas-de-control-escolar-1.pdf": 23,
+    "Pronunciamiento-cero-tolerancia-SEP_18-05-2023.pdf": 47,
+    "Protocolo para la convivencia armonica estudiantado EMS.pdf": 32,
+    "Reglas-de-comunicacion-virtual-PLS_05-12-2023.pdf": 3
+  },
+  "loaded_at": "2026-02-25T09:55:13.588006",
+  "lines_processed": 144
+}

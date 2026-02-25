@@ -1,0 +1,42 @@
+{
+  "file_name": "bases convocatoria_g85.pdf",
+  "file_path": "input_pdfs\\bases convocatoria_g85.pdf",
+  "doc_type": "generic",
+  "file_hash": "cefa21c054ab875a76925bed0dacbe12ed9576028d22924999c5436f1d744261",
+  "extraction_method": "pymupdf",
+  "total_pages": 1,
+  "total_chars": 5979,
+  "structure": {
+    "total_pages": 1,
+    "sections": [],
+    "toc_pages": [],
+    "has_headers_footers": false,
+    "page_numbers": [],
+    "section_breaks": []
+  },
+  "metadata": {
+    "doc_type": "generic",
+    "language": "es",
+    "has_curp": false,
+    "has_emails": 0,
+    "has_urls": 0,
+    "fecha": [
+      "enero",
+      "febrero",
+      "febrero",
+      "febrero",
+      "febrero",
+      "febrero",
+      "febrero",
+      "marzo"
+    ]
+  },
+  "quality": {
+    "score": 1.0,
+    "issues": [
+      "110 caracteres extraños (-0.02)",
+      "+0.1 por 4 keywords"
+    ]
+  },
+  "processing_time": 3.2519116401672363
+}

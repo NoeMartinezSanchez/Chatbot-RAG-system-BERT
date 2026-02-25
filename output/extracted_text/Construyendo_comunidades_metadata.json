@@ -1,0 +1,37 @@
+{
+  "file_name": "Construyendo comunidades.pdf",
+  "file_path": "input_pdfs\\Construyendo comunidades.pdf",
+  "doc_type": "generic",
+  "file_hash": "2bf3b8228a8fc7dddad514cbcba367772546652d53c138d105ea3aee0661f76f",
+  "extraction_method": "pymupdf",
+  "total_pages": 1,
+  "total_chars": 1926,
+  "structure": {
+    "total_pages": 1,
+    "sections": [],
+    "toc_pages": [],
+    "has_headers_footers": false,
+    "page_numbers": [],
+    "section_breaks": []
+  },
+  "metadata": {
+    "doc_type": "generic",
+    "language": "es",
+    "has_curp": false,
+    "has_emails": 0,
+    "has_urls": 3,
+    "url": [
+      "https://prepaen1inea.sep.gob.mx/wp-content/up1oads/2024/01/Circu1ar-SEMS-DSEMS-003-2023_Reg1as-de-",
+      "https://prepaen1inea.sep.gob.mx/wp-",
+      "https://dgb.sep.gob.mx/storage/recursos/2024/09/bAGxHt9ThG-"
+    ]
+  },
+  "quality": {
+    "score": 0.8724818276220145,
+    "issues": [
+      "53 caracteres extraños (-0.03)",
+      "falta puntuación final (-0.1)"
+    ]
+  },
+  "processing_time": 0.03150177001953125
+}

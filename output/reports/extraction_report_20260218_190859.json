@@ -1,0 +1,38 @@
+{
+  "timestamp": "2026-02-18 19:08:59",
+  "config": {
+    "input_dir": "input_pdfs",
+    "output_dir": "output",
+    "debug_dir": "output\\debug",
+    "report_dir": "output\\reports",
+    "ocr_enabled": true,
+    "ocr_language": "spa",
+    "ocr_dpi": 300,
+    "ocr_enhance_image": true,
+    "max_file_size_mb": 50,
+    "timeout_seconds": 300,
+    "preferred_methods": [
+      "ocr"
+    ],
+    "min_text_length": 100,
+    "min_confidence": 0.7,
+    "log_level": "INFO",
+    "save_debug_images": false
+  },
+  "stats": {
+    "total_documents": 1,
+    "successful": 0,
+    "failed": 1,
+    "ocr_used": 0,
+    "total_pages": 0,
+    "total_chars": 0,
+    "processing_time": 0
+  },
+  "summary": {
+    "tasa_éxito": "0.0%",
+    "promedio_páginas": 0.0,
+    "promedio_caracteres": 0.0,
+    "tiempo_promedio": "0.00s",
+    "ocr_usado": 0
+  }
+}

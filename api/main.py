@@ -6,6 +6,16 @@ import logging
 import uuid
 from datetime import datetime
 import os
+import sys
+
+# AÑADIR ESTAS LÍNEAS PARA PRODUCCIÓN
+# Asegurar que el directorio raíz está en el path
+current_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.dirname(current_dir)  # Subir un nivel desde api/
+if project_root not in sys.path:
+    sys.path.insert(0, project_root)
+    print(f"📂 Project root added to path: {project_root}")
+
 
 from config.settings import settings, print_config_summary
 from config.models import ChatRequest, ChatResponse, FeedbackRequest

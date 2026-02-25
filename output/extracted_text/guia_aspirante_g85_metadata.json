@@ -1,0 +1,74 @@
+{
+  "file_name": "guia_aspirante_g85.pdf",
+  "file_path": "input_pdfs\\guia_aspirante_g85.pdf",
+  "doc_type": "guia",
+  "file_hash": "8aa332d975c5a9826eb65294750b50d14da4a6a035e433d9b6f7a627e2791e21",
+  "extraction_method": "pymupdf",
+  "total_pages": 23,
+  "total_chars": 20452,
+  "structure": {
+    "total_pages": 23,
+    "sections": [],
+    "toc_pages": [
+      3,
+      4
+    ],
+    "has_headers_footers": false,
+    "page_numbers": [],
+    "section_breaks": []
+  },
+  "metadata": {
+    "doc_type": "guia",
+    "language": "es",
+    "has_curp": false,
+    "has_emails": 0,
+    "has_urls": 0,
+    "fecha": [
+      "enero",
+      "febrero",
+      "enero",
+      "febrero",
+      "febrero",
+      "febrero",
+      "febrero",
+      "febrero",
+      "marzo",
+      "enero",
+      "febrero",
+      "enero",
+      "febrero"
+    ],
+    "pregunta": [
+      "¿qué hago?",
+      "¿Qué debo verificar cuando escaneé mis documentos?",
+      "¿qué puedo hacer para ingresar a Prepa en Línea-SEP?",
+      "¿qué puedo hacer para estudiar en Prepa en Línea-SEP?",
+      "¿cómo 1o continúo?",
+      "¿Qué hago si perdí mi fo1io?",
+      "¿Qué puedo hacer si me aceptaron, pero no tengo mi certificado de secundaria?",
+      "¿qué puedo hacer?",
+      "¿con quién 1as puedo ac1arar?",
+      "¿Tiene a1gún costo?",
+      "¿En qué horario puedo entrar a1 módu1o propedéutico?",
+      "¿Qué ca1ificación debo obtener para ser promovida o promovido?",
+      "¿por qué ya no puedo entrar a mi au1a?",
+      "¿qué hago?",
+      "¿puedo vo1ver a registrarme?"
+    ],
+    "paso": [
+      "paso",
+      "paso",
+      "paso",
+      "paso",
+      "paso"
+    ]
+  },
+  "quality": {
+    "score": 1.0,
+    "issues": [
+      "453 caracteres extraños (-0.02)",
+      "+0.1 por 4 keywords"
+    ]
+  },
+  "processing_time": 1.9691040515899658
+}

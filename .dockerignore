@@ -1,0 +1,30 @@
+# Entornos virtuales
+venv/
+env/
+chat_env/
+rag_env_new/
+__pycache__/
+*.pyc
+
+# Archivos de configuración local
+.env
+.git/
+.gitignore
+
+# Archivos de datos grandes
+*.pdf
+*.xlsx
+*.jsonl
+*.bin
+*.pkl
+
+# Directorios de datos
+data/vector_store/*
+!data/vector_store/.gitkeep
+logs/*
+!logs/.gitkeep
+
+# Documentación y tests
+README.md
+tests/
+*.log

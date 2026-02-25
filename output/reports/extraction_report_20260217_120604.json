@@ -1,0 +1,40 @@
+{
+  "timestamp": "2026-02-17 12:06:04",
+  "config": {
+    "input_dir": "input_pdfs",
+    "output_dir": "output",
+    "debug_dir": "output\\debug",
+    "report_dir": "output\\reports",
+    "ocr_enabled": true,
+    "ocr_language": "spa",
+    "ocr_dpi": 300,
+    "ocr_enhance_image": true,
+    "max_file_size_mb": 50,
+    "timeout_seconds": 300,
+    "preferred_methods": [
+      "pymupdf",
+      "pdfplumber",
+      "ocr"
+    ],
+    "min_text_length": 100,
+    "min_confidence": 0.7,
+    "log_level": "INFO",
+    "save_debug_images": false
+  },
+  "stats": {
+    "total_documents": 7,
+    "successful": 7,
+    "failed": 0,
+    "ocr_used": 4,
+    "total_pages": 84,
+    "total_chars": 150223,
+    "processing_time": 337.92844462394714
+  },
+  "summary": {
+    "tasa_éxito": "100.0%",
+    "promedio_páginas": 12.0,
+    "promedio_caracteres": 21460.428571428572,
+    "tiempo_promedio": "48.28s",
+    "ocr_usado": 4
+  }
+}

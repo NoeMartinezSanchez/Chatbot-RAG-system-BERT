@@ -1,21 +1,27 @@
 services:
   - type: web
     name: asistente-educativo-rag
-    env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: python -m api.main
+    runtime: docker
+    repo: https://github.com/NoeMartinezSanchez/Chatbot-RAG-system-BERT  # Cambia esto
+    branch: main
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.0
       - key: EMBEDDING_MODEL
         value: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
       - key: VECTOR_STORE
-        value: chroma
+        value: faiss
       - key: PERSIST_DIRECTORY
-        value: /tmp/vector_store
+        value: /opt/render/project/data/vector_store
+      - key: LOG_LEVEL
+        value: INFO
+      - key: ENVIRONMENT
+        value: production
     healthCheckPath: /health
     autoDeploy: true
     disk:
-      name: data
-      mountPath: /tmp/vector_store
-      sizeGB: 1
+      name: rag-data
+      mountPath: /opt/render/project/data
+      sizeGB: 5

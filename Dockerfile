@@ -1,10 +1,10 @@
-# Usar imagen ligera de Python
+# Usar imagen oficial de Python 3.11
 FROM python:3.11-slim
 
 # Establecer directorio de trabajo
 WORKDIR /app
 
-# Instalar dependencias del sistema
+# Instalar dependencias del sistema necesarias
 RUN apt-get update && apt-get install -y \
     gcc \
     g++ \
@@ -14,14 +14,14 @@ RUN apt-get update && apt-get install -y \
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copiar código
+# Copiar el resto del código
 COPY . .
 
 # Crear directorios necesarios
 RUN mkdir -p data/vector_store data/documents logs
 
-# Exponer puerto
+# Exponer puerto (Render asignará automáticamente)
 EXPOSE 8000
 
-# Comando de inicio
-CMD ["python", "-m", "api.main"]
+# Comando de inicio - usa el puerto que Render asigna
+CMD uvicorn api.main:app --host 0.0.0.0 --port $PORT

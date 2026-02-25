@@ -1,0 +1,19 @@
+=== REPORTE DE EXTRACCIÓN ===
+
+Fecha: 2026-02-18 18:16:43
+
+ESTADÍSTICAS:
+  total_documents: 1
+  successful: 1
+  failed: 0
+  ocr_used: 0
+  total_pages: 1
+  total_chars: 5979
+  processing_time: 3.2519116401672363
+
+RESUMEN:
+  tasa_éxito: 100.0%
+  promedio_páginas: 1.0
+  promedio_caracteres: 5979.0
+  tiempo_promedio: 3.25s
+  ocr_usado: 0

@@ -50,6 +50,10 @@ site-packages/
 data/documents/*.xlsx
 # PERO: Mantén los archivos de configuración
 !data/documents/tickets_config.json
+# Carpeta debug con los resultados de las pruebas
+debug/
+# Asegurar que la carpeta no sea ignorada completamente
+!data/documents/
 
 # ======= LOGS =======
 logs/
@@ -73,3 +77,7 @@ htmlcov/
 
 # ======= DOCKER =======
 docker-compose.override.yml
+
+.env.*
+!.env.example
+!.env.production
