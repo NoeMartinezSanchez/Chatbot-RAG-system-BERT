@@ -8,20 +8,21 @@ python-multipart==0.0.6
 
 # Utilities
 requests==2.31.0
-numpy==1.26.4
 loguru==0.7.2
 
-# ML & Embeddings - CON VERSIONES COMPATIBLES
+# ML & Embeddings - VERSIÓN ULTRA-ESTABLE
 sentence-transformers==2.2.2
-torch==2.1.0  # Cambiado de 2.9.1 a 2.1.0 (más estable)
-transformers==4.35.0  # Cambiado de 4.41.2 a 4.35.0
-huggingface-hub==0.19.4  # AÑADIDO - versión específica
+torch==2.0.1
+transformers==4.31.0
+huggingface-hub==0.16.4
+tokenizers==0.13.3
 
 # Vector Search
-faiss-cpu==1.7.4  # Cambiado de 1.13.2 a 1.7.4 (más estable)
+faiss-cpu==1.7.4
+numpy==1.24.3
 
 # Tokenization
-tiktoken==0.5.1  # Cambiado de 0.7.0 a 0.5.1
+tiktoken==0.5.1
 
 # Testing
 pytest==7.4.3
