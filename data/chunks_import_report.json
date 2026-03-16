@@ -1,23 +1,23 @@
 {
-  "total_chunks": 144,
+  "total_chunks": 89,
   "by_type": {
-    "convocatoria": 10,
-    "decalogo": 6,
-    "guia": 23,
-    "normativa": 23,
-    "politica": 47,
-    "protocolo": 32,
-    "reglas": 3
+    "convocatoria": 7,
+    "decalogo": 11,
+    "guia": 8,
+    "normativa": 25,
+    "politica": 13,
+    "protocolo": 12,
+    "reglas": 13
   },
   "by_source": {
-    "bases convocatoria_g85.pdf": 10,
-    "Construyendo comunidades.pdf": 6,
-    "guia_aspirante_g85.pdf": 23,
-    "Normas-de-control-escolar-1.pdf": 23,
-    "Pronunciamiento-cero-tolerancia-SEP_18-05-2023.pdf": 47,
-    "Protocolo para la convivencia armonica estudiantado EMS.pdf": 32,
-    "Reglas-de-comunicacion-virtual-PLS_05-12-2023.pdf": 3
+    "bases convocatoria_g85.pdf": 7,
+    "Construyendo comunidades.pdf": 11,
+    "guia_aspirante_g85.pdf": 8,
+    "Normas-de-control-escolar-1.pdf": 25,
+    "Pronunciamiento-cero-tolerancia-SEP_18-05-2023.pdf": 13,
+    "unknown": 12,
+    "Reglas-de-comunicacion-virtual-PLS_05-12-2023.pdf": 13
   },
-  "loaded_at": "2026-02-25T09:55:13.588006",
-  "lines_processed": 144
+  "loaded_at": "2026-03-05T09:17:23.362564",
+  "lines_processed": 89
 }

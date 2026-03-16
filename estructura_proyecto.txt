@@ -52,22 +52,64 @@
 │   ├── 📄 models.py
 │   └── 📄 settings.py
 ├── 📁 data/
+│   ├── 📁 backups/
+│   │   ├── 📁 backup_20260304_130944/
+│   │   ├── 📁 backup_20260304_212458/
+│   │   ├── 📁 backup_20260304_221729/
+│   │   ├── 📁 backup_20260304_224952/
+│   │   └── 📁 backup_20260305_091422/
 │   ├── 📁 documents/
 │   │   ├── 📄 create_prepa_excel.py
 │   │   ├── 📄 tickets.xlsx
 │   │   ├── 📄 tickets_2.xlsx
 │   │   ├── 📄 tickets_3.xlsx
-│   │   ├── 📄 tickets_config.json
-│   │   └── 📄 ~$tickets_3.xlsx
+│   │   ├── 📄 tickets_4.xlsx
+│   │   └── 📄 tickets_config.json
 │   ├── 📁 vector_store/
 │   │   ├── 📄 documents.pkl
 │   │   ├── 📄 faiss_index.bin
 │   │   ├── 📄 intents.json
 │   │   └── 📄 metadata.pkl
-│   ├── 📄 intents.json
-│   └── 📄 rag_import_report.json
+│   ├── 📄 chunks_import_report.json
+│   └── 📄 intents.json
+├── 📁 debug/
+│   ├── 📄 pdf_debug_20260303_234244.xlsx
+│   ├── 📄 pdf_debug_20260304_131509.xlsx
+│   ├── 📄 pdf_debug_20260304_194818.xlsx
+│   ├── 📄 pdf_debug_20260304_212823.xlsx
+│   ├── 📄 pdf_debug_20260304_222247.xlsx
+│   ├── 📄 pdf_debug_20260304_223006.xlsx
+│   ├── 📄 pdf_debug_20260304_225251.xlsx
+│   ├── 📄 pdf_debug_20260304_230424.xlsx
+│   ├── 📄 pdf_debug_20260304_233439.xlsx
+│   ├── 📄 pdf_debug_20260305_091855.xlsx
+│   ├── 📄 rag_debug_20260210_124859.json
+│   ├── 📄 rag_debug_20260210_124859.xlsx
+│   ├── 📄 rag_debug_20260210_130728.json
+│   ├── 📄 rag_debug_20260210_130728.xlsx
+│   ├── 📄 rag_debug_20260210_132159.json
+│   ├── 📄 rag_debug_20260210_132159.xlsx
+│   ├── 📄 rag_debug_20260210_133232.json
+│   ├── 📄 rag_debug_20260210_133232.xlsx
+│   ├── 📄 rag_debug_20260210_134049.json
+│   ├── 📄 rag_debug_20260210_134049.xlsx
+│   ├── 📄 rag_debug_20260210_140743.json
+│   ├── 📄 rag_debug_20260210_140743.xlsx
+│   ├── 📄 rag_debug_20260210_142443.json
+│   ├── 📄 rag_debug_20260210_142443.xlsx
+│   ├── 📄 rag_debug_20260210_144924.json
+│   ├── 📄 rag_debug_20260210_144924.xlsx
+│   ├── 📄 rag_debug_20260210_145322.json
+│   ├── 📄 rag_debug_20260210_145322.xlsx
+│   ├── 📄 rag_debug_20260210_175128.json
+│   ├── 📄 rag_debug_20260210_175128.xlsx
+│   ├── 📄 rag_debug_20260213_121906.json
+│   ├── 📄 rag_debug_20260213_121906.xlsx
+│   ├── 📄 rag_debug_20260213_122056.json
+│   ├── 📄 rag_debug_20260213_122056.xlsx
+│   ├── 📄 rag_debug_20260213_122829.json
+│   └── 📄 rag_debug_20260213_122829.xlsx
 ├── 📁 docker/
-│   └── 📄 Dockerfile
 ├── 📁 images/
 │   ├── 📄 api.jpg
 │   ├── 📄 deepseek_mermaid_20260202_c8b939.png
@@ -83,6 +125,8 @@
 │   ├── 📄 generator.py
 │   └── 📄 retriever.py
 ├── 📁 scripts/
+│   ├── 📄 debug_rag_loader.py
+│   ├── 📄 load_chunks_to_rag.py
 │   ├── 📄 setup_local.py
 │   └── 📄 upload_documents.py
 ├── 📁 static/
@@ -90,14 +134,21 @@
 ├── 📁 tests/
 │   ├── 📄 test_api.py
 │   └── 📄 test_rag.py
+├── 📄 .dockerignore
 ├── 📄 .env
+├── 📄 .env.production
+├── 📄 Dockerfile
 ├── 📄 README.md
+├── 📄 debug_chunks_pdf_simple.py
 ├── 📄 debug_intents_fixed_corrected.py
+├── 📄 debug_rag.py
+├── 📄 debug_rag_avanzado.py
+├── 📄 diagnostico_rapido.py
 ├── 📄 estructura_proyecto.txt
-├── 📄 fix_core_process_query.py
-├── 📄 fix_intents_search.py
 ├── 📄 generate_tree.py
 ├── 📄 notas.txt
 ├── 📄 presentacion.html
 ├── 📄 render.yaml
-└── 📄 requirements.txt
+├── 📄 requirements.txt
+├── 📄 reset_faiss.py
+└── 📄 verificar_todo.py

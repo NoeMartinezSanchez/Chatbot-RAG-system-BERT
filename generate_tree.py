@@ -15,7 +15,7 @@ def should_exclude(path_name):
             return True
     return False
 
-def generate_tree(directory, prefix='', max_depth=3, current_depth=0):
+def generate_tree(directory, prefix='', max_depth=4, current_depth=0):
     """Genera un árbol de directorios limpio"""
     if current_depth > max_depth:
         return []

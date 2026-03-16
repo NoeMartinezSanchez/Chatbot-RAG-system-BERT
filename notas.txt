@@ -110,3 +110,32 @@ git commit -m "Agregada funcionalidad X"
 
 # 6. Sube cambios
 git push origin main
+
+
+
+#------------------BORRAR DATOS DE FAISS--------------------------------
+
+reset_faiss.py en la raíz de tu proyecto. Luego:
+
+Uso básico (con confirmación)
+python reset_faiss.py
+
+Forzar eliminación sin preguntar
+python reset_faiss.py --force
+
+Eliminar y crear índice vacío automáticamente
+python reset_faiss.py --create-empty
+
+Eliminar sin crear backup
+python reset_faiss.py --no-backup
+
+#------------CARGAR LOS CHUNKS---------------------
+
+python scripts/load_chunks_to_rag.py --chunks "..\Documentos RAG\output\chunks\ready_for_rag\all_chunks.jsonl"
+
+
+#------------EJECUTAR EL DEBUG PARA DOCUMENTOS PDF--------------------
+
+python debug_chunks_pdf_simple.py
+
+python debug_chunks_pdf_simple.py --name mi_prueba_marzo
